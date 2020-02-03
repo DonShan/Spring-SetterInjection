@@ -14,7 +14,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	
 	//EmployeeRepository employeeRepository = new HibernateEmployeeRepositoryImpl();
 	
-	@Autowired
+	
 	private EmployeeRepository employeeRepository;
 	
 	
@@ -25,7 +25,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 
 
+	@Autowired
 	public void setEmployeeRepository(EmployeeRepository employeeRepository) {
+		System.out.println("Setter injectin Fired");
 		this.employeeRepository = employeeRepository;
 	}
 
