@@ -14,24 +14,25 @@ public class EmployeeServiceImpl implements EmployeeService {
 	
 	//EmployeeRepository employeeRepository = new HibernateEmployeeRepositoryImpl();
 	
-	
-	private EmployeeRepository employeeRepository;
-	
-	
-	
+	EmployeeRepository employeeRepository;
+
+	public EmployeeServiceImpl(){
+		//To auto - genarated constractor stub
+	}
+
+	public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
+		this.employeeRepository = employeeRepository
+	}
+
 	public EmployeeRepository getEmployeeRepository() {
 		return employeeRepository;
 	}
-
-
 
 	@Autowired
 	public void setEmployeeRepository(EmployeeRepository employeeRepository) {
 		System.out.println("Setter injectin Fired");
 		this.employeeRepository = employeeRepository;
 	}
-
-
 
 	@Override
 	public List<Employee> getAllEmployees() {
